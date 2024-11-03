@@ -1,0 +1,383 @@
+@charset "UTF-8";
+body {
+  background-color: #F6FCDF;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  margin: 0px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav > ul {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  list-style: none;
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 5px 10px 10px 10px;
+  overflow: hidden;
+  background-color: #1A1A19;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+p > a, span {
+  padding-left: 10px;
+}
+
+nav li {
+  float: left;
+  display: block;
+}
+
+li a {
+  padding: 20px 15px;
+  color: #FFFFFF;
+}
+
+li a:hover {
+  background-image: linear-gradient(180deg, #31511E, #859F3D);
+}
+
+.homeButton {
+  margin-left: 1rem;
+}
+
+@keyframes nameEntrance {
+  from {
+    margin-left: 1000px;
+  }
+  to {
+    margin-left: 8;
+  }
+}
+@keyframes titleEntrance {
+  from {
+    margin-right: 1000px;
+  }
+  to {
+    margin-right: 8;
+  }
+}
+@keyframes enterCard {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+img {
+  height: 120px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  overflow: hidden;
+  margin-left: 0;
+  width: 100vw;
+  padding-bottom: 2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 10rem;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 2.5rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  color: #FFFFFF;
+  background-image: linear-gradient(to right, #1A1A19, #31511E, #859F3D, #F6FCDF);
+  border-radius: 10px;
+  margin-top: 4rem;
+  overflow: hidden;
+  animation-name: enterCard;
+  animation-duration: 3s;
+}
+
+.name {
+  font-size: 5rem;
+  margin: 0.5rem;
+  animation-name: nameEntrance;
+  animation-duration: 2s;
+}
+
+.jobTitle {
+  margin: 0.5rem;
+  font-size: 3rem;
+  animation-name: titleEntrance;
+  animation-duration: 2s;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-template-rows: 1.4fr 2fr 1fr 1.75fr;
+  gap: 2rem;
+  width: 85vw;
+  margin-top: 1.5rem;
+  grid-template-areas: "contact prof" "skills experience" "skills experience" "lang experience" "projects education";
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.content > div {
+  background-color: #859F3D;
+  border-radius: 10px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 0.5rem;
+  color: #FFFFFF;
+  box-shadow: 5px 5px 8px 8px #31511E;
+}
+
+.content p, a {
+  font-size: 1.2rem;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.lang {
+  grid-area: lang;
+  padding-bottom: 1rem;
+}
+
+.education {
+  grid-area: education;
+}
+
+.profile {
+  grid-area: prof;
+}
+
+.experience {
+  grid-area: experience;
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.skillList {
+  font-size: 1.2rem;
+}
+
+.date {
+  float: right;
+}
+
+h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.iframe {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.experience ul > li {
+  font-size: 1.2rem;
+}
+
+footer {
+  height: 16rem;
+  width: 100vw;
+  background-color: #1A1A19;
+  margin: 0;
+}
+
+.footer {
+  height: 13.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-shrink: 1;
+}
+
+.copyright {
+  text-align: center;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+@media only screen and (max-width: 1000px) {
+  .footer > img {
+    height: 90px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 2rem;
+    width: 85vw;
+    margin-top: 1.5rem;
+    grid-template-areas: "prof" "contact" "skills" "experience" "lang" "projects" "education";
+  }
+  .footer > img {
+    height: 80px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .footer {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  footer {
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .footer > img {
+    height: 60px;
+  }
+  .header  {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .name {
+    font-size: 4rem;
+  }
+  .jobTitle {
+    font-size: 2rem;
+  }
+  @keyframes nameEntrance {
+    from {
+      margin-left: 60px;
+    }
+    to {
+      margin-left: 8;
+    }
+  }
+  @keyframes titleEntrance {
+    from {
+      margin-right: 60px;
+    }
+    to {
+      margin-right: 8;
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .header {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  iframe {
+    height: 200px;
+    width: 250px;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+  .jobTitle {
+    font-size: 1.7rem;
+  }
+  @keyframes nameEntrance {
+    from {
+      margin-left: 3rem;
+    }
+    to {
+      margin-left: 8;
+    }
+  }
+  @keyframes titleEntrance {
+    from {
+      margin-right: 3rem;
+    }
+    to {
+      margin-right: 8;
+    }
+  }
+  .content > div > ul {
+    padding-left: 1.5rem;
+  }
+  .date {
+    padding-left: 0;
+    padding-right: 0;
+    float: none;
+    display: block;
+  }
+  .profile, .contact {
+    padding-bottom: 1rem;
+  }
+  .skills, .experience  {
+    padding-bottom: 0.5rem;
+  }
+  .navbar > ul {
+    font-size: 0.75rem;
+    padding: 5px;
+  }
+  .homeButton {
+    margin-left: 0;
+  }
+  li > a {
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+th {
+  font-size: 1.3rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  min-width: 400px;
+}
+
+th, td {
+  padding: 2px 15px;
+  text-align: left;
+}
+
+td {
+  font-size: 1.1rem;
+}
+
+tbody {
+  margin-bottom: 10rem;
+}/*# sourceMappingURL=styles.css.map */
